@@ -1,0 +1,13 @@
+﻿service: sls-test
+frameworkVersion: "3"
+configValidationMode: off
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-2
+  stage: dev
+
+functions:
+  Ping:
+    handler: src/lambda/http/getTodos.handler
